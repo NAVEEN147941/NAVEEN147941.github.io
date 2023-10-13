@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>generate_passward</title>
+    <script
+      src="https://kit.fontawesome.com/2a164d10a5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         .container{
+           margin: 12%;
+           width: 90%;
+           max-width: 700px; 
+         }
+         .display{
+            width: 1005;
+            margin-top: 50px;
+            margin-bottom: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            padding: 25px, 20px ;
+         }
+         .container h1 {
+            font-weight: 500;
+            font-size: 45px;
+         }
+         .container h1 span{
+            padding-bottom: 7px;
+            border-bottom: 4px solid black;
+         }
+         .display img {
+            width: 38px;
+            cursor: pointer;
+         }
+         i{
+            margin-right: 50%;
+            font-size: 50px;
+         }
+         .display input{
+            border: 0;
+            outline: 0;
+            font-size: 24px;
+         }
+         .container button{
+            border: 0;
+            outline: 0;
+            font-size: 22px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 26px;
+            border-radius: 5px;
+            cursor: pointer;
+         }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <h1>
+          Generate a <br />
+          <span>Random Passward</span>
+        </h1>
+        <div class="display">
+          <input type="text" id="passward" placeholder="passward" />
+          <i class="fa-regular fa-copy" onclick="copypassward()"></i>
+        </div>
+        <button onclick="CreatePassward()">submite</button>
+      </div>
+    </div>
+
+    <script>
+
+        var passwardBox = document.getElementById("passward");
+        var length = 12;
+        var uppercase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+        var lowercase = "abcdefghijklmnopqrstuvxyz";
+        var number = "0123456789";
+        var symbol = "!@#$%^&*()_";
+
+        var allChars = uppercase + lowercase + number + symbol;
+
+        function CreatePassward(){
+            var passward = "";
+            passward += uppercase[ Math.floor(Math.random() * uppercase.length)];
+            passward += lowercase[ Math.floor(Math.random() * lowercase.length)];
+            passward += number[ Math.floor(Math.random() * number.length)];
+            passward += symbol[ Math.floor(Math.random() * symbol.length)];
+
+            while ( length > passward.length){
+                passward += allChars[ Math.floor( Math.random() * allChars.length)];
+            }
+            passwardBox.value = passward
+        }
+
+        function copypassward(){
+            passwardBox.select();
+            document.execCommand("copy");
+        }
+       
+
+
+    </script>
+  </body>
+</html>
