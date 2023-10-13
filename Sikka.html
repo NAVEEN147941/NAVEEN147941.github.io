@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2a164d10a5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>sikka web page</title>
+    <link rel="icon" type="images/x-icon" href="./asits/logo.png"">
+
+    <style>
+      .nav-link {
+        color: white;
+        font-family: Poppins;
+        font-weight: 400;
+      }
+      .nav-link:hover {
+        color: lightsalmon;
+      }
+
+      .bg_text {
+        color: #ecb93e;
+        font-family: Montserrat;
+        letter-spacing: 0.2px;
+        font-weight: 700;
+      }
+      .bg_text_1 {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: Montserrat;
+      }
+      .col_box {
+        margin-top: 4%;
+      }
+      .text_1 {
+        font-family: Poppins;
+        font-size: 32px;
+        color: #e77c40;
+        font-weight: 700;
+      }
+      .text_2 {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .text_3 {
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        color: #e77c40;
+      }
+      .text_4 {
+        font-family: Montserrat;
+        color: #252b42;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+      }
+      .text_5 {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #252b42;
+        letter-spacing: 0.2px;
+      }
+      .text_6 {
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        color: #e77c40;
+      }
+      .text_7 {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: #252b42;
+      }
+      .box_soze {
+        margin-top: 9%;
+      }
+      .text_8 {
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0.2px;
+        color: #fff;
+      }
+      .text_9 {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: #fff;
+      }
+      .container_2 {
+        position: relative;
+        margin-top: -4%;
+      }
+      @media (min-width: 375px) and (max-width: 667px) {
+        .container_2 {
+          margin-top: 50%;
+          margin-bottom: 10%;
+          width: 80%;
+        }
+        .container_top {
+          margin-top: -10%;
+        }
+        .img_center {
+          margin-left: 8%;
+        }
+        .img_women {
+          margin-top: 50%;
+        }
+        .box_soze {
+          margin-top: -120%;
+        }
+        .img_women_3 {
+          margin-top: 80%;
+        }
+        .col_text_img {
+          margin-top: -200%;
+        }
+      }
+      @media (min-width: 360px) and (max-width: 740px) {
+        .container_2 {
+          position: relative;
+          margin-top: -10%;
+          width: 80%;
+        }
+        .img_women {
+          margin-top: 50%;
+        }
+        .box_soze {
+          margin-top: -120%;
+        }
+        .img_women_3 {
+          margin-top: 80%;
+        }
+        .col_text_img {
+          margin-top: -200%;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .container_2 {
+          position: relative;
+          margin-top: -5%;
+        }
+        .bg_shping {
+          margin-top: 30%;
+        }
+        .nav_slide {
+          margin-top: -5;
+        }
+      }
+      .card_row {
+        margin-left: 9%;
+      }
+      .card_text {
+        color: var(--second-text-color, #737373);
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+      .card_name_text {
+        color: var(--alert-color, #e77c40);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+      .card_Perthy {
+        color: var(--text-color, #252b42);
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+      }
+      @media (min-width: 375px) and (max-width: 667px) {
+        .card_row {
+          margin-left: 13%;
+          width: 100%;
+        }
+      }
+      @media (min-width: 820px) and (max-width: 1180px) {
+        .card_row {
+          width: 100%;
+          margin-left: 5%;
+        }
+        .img_center {
+          margin-left: 15%;
+        }
+        .shoping_img {
+          margin-top: 13%;
+        }
+        .woman-shopping {
+          margin-top: 15%;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .img_center {
+          margin-left: 14%;
+        }
+        .shoping_img {
+          margin-top: 13%;
+        }
+        .woman-shopping {
+          margin-top: 15%;
+        }
+        .first_row {
+          margin-top: -5%;
+        }
+      }
+      @media (min-width: 540px) and (max-width: 720px) {
+        .img_center {
+          margin-left: 17%;
+        }
+        .img_women {
+          margin-top: 30%;
+        }
+        .box_soze {
+          margin-top: -100%;
+        }
+        .img_women_3 {
+          margin-top: 40%;
+        }
+        .col_text_img {
+          margin-top: -135%;
+        }
+      }
+      .text_10 {
+        color: var(--text-color, #252b42);
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 0.2px;
+      }
+      .text_11 {
+        color: var(--second-text-color, #737373);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+      .footer_heading {
+        color: var(--alert-color, #e77c40);
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+      }
+      .text_hover {
+        color: var(--light-text-color, #fff);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+      }
+      .text_hover:hover {
+        color: yellow;
+        font-size: 18px;
+      }
+      .footer_text {
+        color: var(--alert-color, #e77c40);
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container-fluid bg-black p-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img class="img-fluid w-50" src="./asits/logo.png" alt="logo" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul
+                class="navbar-nav ms-auto me-5 pe-5 justify-content-end nav_buttons"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Categories <i class="fa-solid fa-angle-down"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">How it Works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sign In</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <button
+                      type="button"
+                      class="btn btn-warning rounded-pill text-white"
+                    >
+                      Join Now
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container nav_slide" style="position: relative">
+          <div class="row">
+            <div class="col-sm-6 pt-5 first_row">
+              <h1 class="bg_text">
+                Cash back <br />
+                when you SHOP!
+              </h1>
+              <p class="bg_text_1 pt-3">
+                Start every shop with Cash rewards and<br />
+                get that 'yay' feeling watching your cash <br />
+                back add up.
+              </p>
+              <div class="d-flex justify-content-start mb-3">
+                <div class="p-2">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white rounded-pill"
+                  >
+                    Join Now
+                  </button>
+                </div>
+                <div class="p-2">
+                  <button
+                    type="button"
+                    class="btn btn-outline-warning rounded-pill"
+                  >
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 p-3">
+              <img
+                class="img-fluid ms-5 bg_shping"
+                src="./asits/shoping_1.png"
+                alt="shoping_img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container shadow bg-white container_2">
+        <div class="row">
+          <div class="col-sm-4 p-3">
+            <img class="img-fluid" src="./asits/mobile.png" alt="" />
+          </div>
+          <div class="col-sm-8 p-3 col_box">
+            <h1 class="pt-3 text_1">So, how does it work?</h1>
+            <p class="text_2">
+              When you shop at your favorite stores through Cashrewards, we earn
+              a <br />
+              percentage from those retailers and pass a large portion back to
+              you!
+            </p>
+            <button
+              type="button"
+              class="btn btn-warning text-white rounded-pill"
+            >
+              Know More
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid container_top">
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col-sm-6 p-2">
+            <h1 class="pt-3 text_3">Not sure where to start?</h1>
+            <h5 class="text_4">1. Create an Account</h5>
+            <p class="text_5">
+              Excited to earn cashback? Setting up an account is too easy! Just
+              fill out <br />
+              your details and link your card for when you shop locally.
+            </p>
+            <button
+              type="button"
+              class="btn btn-warning text-white rounded-pill"
+            >
+              Join Now
+            </button>
+            <h5 class="pt-2 text_4">2. Never Shop the same again</h5>
+            <h5 class="text_4">3. Its raining Cash</h5>
+          </div>
+          <div class="col-sm-6">
+            <img
+              class="img-fluid pt-2 shoping_img"
+              src="./asits/shoping_lmg_2.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-light pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 img_women">
+            <img
+              class="img-fluid woman-shopping"
+              src="./asits/woman-shopping 1.png"
+              alt="woman-shopping"
+            />
+          </div>
+          <div class="col-sm-6 box_soze">
+            <h1 class="pt-3 text_6">Get paid to shop</h1>
+            <p class="text_7">
+              Savour that first moment you get paid to shop. Now you can track
+              your savings as you go. As any of our members will tell you, it’s
+              addictive!
+            </p>
+            <div class="p-3">
+              <button
+                type="button"
+                class="btn btn-warning text-white rounded-pill"
+              >
+                Start shopping
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-5 pt-3" style="background-color: #ffa500">
+      <div class="container pt-5">
+        <div class="d-flex justify-content-center">
+          <h1 class="text_8">Over 100+ stores to choose from.</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="text_9">
+            Find your favourite stores or discover a new one with an incredible
+            offer
+          </p>
+        </div>
+        <div class="img_center">
+          <div class="d-flex justify-content-sm-center">
+            <div class="row p-2">
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/col-md-4.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/col-md-4-1.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/col-md-4-2.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/Kiln.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-sm-center">
+            <div class="row p-2">
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/morgen_logo.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/dunkin.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/wahu.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/sakura.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-sm-center">
+            <div class="row p-2">
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/cafe_logo.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/shahia_logo.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/coast_logo.png" alt="" />
+              </div>
+              <div class="col-lg-3 col-md-6 p-2">
+                <img src="./asits/zito_logo.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-3">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <h1 class="pt-3">Happy Customers</h1>
+        </div>
+        <div class="row card_row">
+          <div class="col-sm-4 p-3">
+            <div class="card w-75 bg-light">
+              <div class="card-body pt-3">
+                <div class="d-flex justify-content-center">
+                  <img class="img-fluid img_top" src="./asits/stars.png" />
+                </div>
+                <div class="d-flex justify-content-center pt-2">
+                  <p class="card_text">
+                    I’ve been using SIKKA<br />
+                    for almost two years<br />
+                    now and it’s been<br />
+                    fantastic! It’s a great<br />
+                    way to accumulate a <br />
+                    bit of money.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                  <div class="p-2">
+                    <img src="./asits/regina_img.png" alt="" />
+                  </div>
+                  <div class="p-2">
+                    <span class="card_name_text"> Regina Miles </span><br />
+                    <span class="card_text">Perthy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4 p-3">
+            <div class="card w-75 bg-light">
+              <div class="card-body pt-3">
+                <div class="d-flex justify-content-center">
+                  <img class="img-fluid img_top" src="./asits/stars.png" />
+                </div>
+                <div class="d-flex justify-content-center pt-2">
+                  <p class="card_text">
+                    I’ve been using SIKKA<br />
+                    for almost two years<br />
+                    now and it’s been<br />
+                    fantastic! It’s a great<br />
+                    way to accumulate a <br />
+                    bit of money.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                  <div class="p-2">
+                    <img src="./asits/regina_2_img.png" alt="" />
+                  </div>
+                  <div class="p-2">
+                    <span class="card_name_text"> Regina Miles </span><br />
+                    <span class="card_text">Perth</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 p-3">
+            <div class="card w-75 bg-light">
+              <div class="card-body pt-3">
+                <div class="d-flex justify-content-center">
+                  <img class="img-fluid img_top" src="./asits/stars.png" />
+                </div>
+                <div class="d-flex justify-content-center pt-2">
+                  <p class="card_text">
+                    I’ve been using SIKKA<br />
+                    for almost two years<br />
+                    now and it’s been<br />
+                    fantastic! It’s a great<br />
+                    way to accumulate a <br />
+                    bit of money.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                  <div class="p-2">
+                    <img src="./asits/regina_3.png" alt="" />
+                  </div>
+                  <div class="p-2">
+                    <span class="card_name_text"> Regina Miles </span><br />
+                    <span class="card_text">Sydney</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-light">
+      <div class="container">
+        <div class="d-flex justify-content-sm-center">
+          <div class="row">
+            <div class="col-sm-6 img_women_3">
+              <img class="img-fluid pt-5" src="./asits/woman3 1.png" alt="" />
+            </div>
+            <div class="col-sm-6 pt-5 col_text_img">
+              <h1 class="pt-5 text_10">Never miss cashback.</h1>
+              <p class="text_11">
+                Sign up for SIKKA emails to be the fist to see news and
+                exclusive offers.
+              </p>
+              <div class="d-flex justify-content-start">
+                <div>
+                  <form action="/action_page.php">
+                    <div class="w-100">
+                      <label for="email"></label>
+                      <input
+                        type="email"
+                        class="form-control disbale"
+                        id="email"
+                        placeholder="You're email"
+                        name="email"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="pt-4">
+                  <button type="button" class="btn btn-danger text-white">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-black p-4">
+      <div class="container pt-3">
+        <div class="row p-2">
+          <div class="col-lg-3 col-md-6 p-2">
+            <h5 class="footer_heading">Get In Touch</h5>
+            <div class="d-flex justify-content-start mb-3">
+              <div class="p-2">
+                <img
+                  class="img-fluid"
+                  src="./asits/facebook.png"
+                  alt="fasebook"
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  class="img-fluid"
+                  src="./asits/instagram.png"
+                  alt="instagram"
+                />
+              </div>
+              <div class="p-2">
+                <img
+                  class="img-fluid"
+                  src="./asits/twitter.png"
+                  alt="twitter"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 p-2">
+            <h5 class="footer_heading">About SIKKA</h5>
+            <p>
+              <span class="text_hover">How it works</span><br />
+              <span class="text_hover">Reviews</span><br />
+              <span class="text_hover">Careers</span><br />
+              <span class="text_hover">Blog</span><br />
+              <span class="text_hover">partnership</span><br />
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 p-2">
+            <h5 class="footer_heading">My Account</h5>
+            <p class="text-white">
+              <span class="text_hover">My rewards</span><br />
+              <span class="text_hover">Settings</span><br />
+              <span class="text_hover">Click history</span><br />
+              <span class="text_hover">Refer a Friend</span><br />
+              <span class="text_hover">Favourites</span><br />
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 p-2">
+            <h5 class="footer_heading">Help</h5>
+            <p class="text-white">
+              <span class="text_hover">Help centre</span><br />
+              <span class="text_hover">Contact us</span><br />
+              <span class="text_hover">Get Started</span><br />
+            </p>
+          </div>
+        </div>
+        <p class="text-white pt-5">
+          <span class="footer_text">Terms</span> |
+          <span class="footer_text">Privacy</span> © 2023 SIKKA. All Right
+          Reserved
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
